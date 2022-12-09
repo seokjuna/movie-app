@@ -1,16 +1,22 @@
 import PropTypes from "prop-types";
+import styles from "./MovieDetail.module.css";
 
-function MovieDetail({coverImg, title, description_full, genres}) {
+function MovieDetail({coverImg, title, year, description_full, genres}) {
     return (
-        <div>
-            <img src={coverImg} alt={title} />
-            <h2>{title}</h2>
-            <p>{description_full}</p>
-            <p>
-                {genres.map((g) => (
-                    <li key={g}>{g}</li>
-                ))}
-            </p>
+        <div className={styles.movie}>
+            <img src={coverImg} alt={title} className={styles.movie__img} />
+            <div>
+                <h2 className={styles.movie__title}>{title}</h2>
+                <h3 className={styles.movie__year}>{year}</h3>
+                <hr />
+                <p>{description_full}</p>
+                
+                <ul className={styles.movie__genres}>
+                    {genres.map((g) => (
+                        <li key={g}>{g}</li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }
