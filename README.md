@@ -1,4 +1,6 @@
 # Movie App
+
+영화 목록 api를 이용해서 평점 9점 이상의 영화 목록 페이지를 만듬
 <br>
 <img width="500" alt="home" src="https://user-images.githubusercontent.com/102382351/207522547-99123b02-7518-40f9-996f-283edb2596fa.png">
 Movie App 홈 페이지
