@@ -18,10 +18,10 @@ function Detail() {
     };
     useEffect(() => {
         getMovie();
-    }, [])
+    }, []);
 
     return (
-        <div>
+        <div className={styles.container}>
             {loading ? (
                 <div className={styles.loader}>
                     <span>Loading</span>
@@ -32,10 +32,12 @@ function Detail() {
                         key={movie.id}
                         id={movie.id}
                         year={movie.year}
+                        rating={movie.rating}
                         coverImg={movie.medium_cover_image}
                         title={movie.title}
                         description_full={movie.description_full}
                         genres={movie.genres}
+                        url={movie.url}
                     />
                 </div>    
             )}

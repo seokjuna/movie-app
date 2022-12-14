@@ -12,13 +12,14 @@ function Movie({id, coverImg, title, year, summary, genres}) {
                         {title}
                     </Link>
                 </h2>
-                <h3 className={styles.movie__year}>{year}</h3>
-                <p>{summary.length > 230 ? `${summary.slice(0, 235)}...` : summary}</p>
                 <ul className={styles.movie__genres}>
                     {genres.map((g) => (
                         <li key={g}>{g}</li>
                     ))}
                 </ul>
+                <h3 className={styles.movie__year}>{year}</h3>
+                <p>{summary.length > 200 ? `${summary.slice(0, 200)}...` : summary}</p>
+                
             </div>
         </div>
     );
@@ -29,7 +30,8 @@ Movie.propTypes = {
     coverImg: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
-    genres: PropTypes.arrayOf(PropTypes.string).isRequired
+    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+    rating: PropTypes.number.isRequired
 }
 
 export default Movie;
