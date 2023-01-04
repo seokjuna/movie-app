@@ -1,7 +1,12 @@
 # Movie App
 
-영화 목록 api를 이용해서 평점 9점 이상의 영화 목록 페이지를 만듬
+영화 목록 api를 이용해서 평점 9점 이상의 영화 목록 페이지 만들기
 <br>
+
+React: <br>
+- UI: Movie, MovieDetail, Navigation<br>
+- npm:react-router-dom, prop-types, @fortawesome<br>
+- function: useState, useEffect, useParams<br>
 <br>
 홈페이지<br>
 <img width="500" alt="home" src="https://user-images.githubusercontent.com/102382351/207522547-99123b02-7518-40f9-996f-283edb2596fa.png"><br>
